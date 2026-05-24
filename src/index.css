@@ -1,7 +1,40 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Druk Condensed Super';
+  src: url('/fonts/Druk-CondSuper.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sul Sans Test';
+  src: url('/fonts/SulSansTest-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sul Sans Test';
+  src: url('/fonts/SulSansTest-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sul Sans Test';
+  src: url('/fonts/SulSansTest-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
-  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Sul Sans Test', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Druk Condensed Super', Impact, sans-serif;
   --color-ink: #111111;
   --color-muted: #666666;
   --color-paper: #FEFCF7;
@@ -19,7 +52,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Sul Sans Test', ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #FEFCF7;
