@@ -6,16 +6,12 @@ const assets = {
   heroBg: 'https://www.figma.com/api/mcp/asset/10eca87b-26e9-4778-b69d-5130351771ee',
   heroCanarinhos: 'https://www.figma.com/api/mcp/asset/bd4bb975-1ea9-4289-bb71-8ea0dd4ae361',
   logo: 'https://www.figma.com/api/mcp/asset/128d381a-313f-43e6-91e6-8cf31e088e8a',
-  sealIcon: 'https://www.figma.com/api/mcp/asset/50953a8e-14c7-41d6-9e78-e37f250b35f2',
-  canarinhosBg: 'https://www.figma.com/api/mcp/asset/939caad8-fd7d-4a92-afb2-52eda64d6e3e',
-  canarinho58: 'https://www.figma.com/api/mcp/asset/4c645785-b2e9-4bcc-bab6-5540dacab781',
-  canarinho58Seal: 'https://www.figma.com/api/mcp/asset/47ec01ab-9fcb-474e-a51c-04c0e2bfdbe2',
 }
 
 const navItems = [
   { label: 'Coleção', progress: 0 },
-  { label: 'Os Canarinhos', progress: 0.22 },
-  { label: 'Cards holográficos', progress: 0.72 },
+  { label: 'Os Canarinhos', progress: 0.15 },
+  { label: 'Cards holográficos', progress: 0.96 },
   { label: 'Como colecionar', progress: 1 },
 ]
 
@@ -26,44 +22,49 @@ const canarinhos = [
     index: '#01',
     title: 'O PIONEIRO',
     description: 'O Canarinho que apresentou o futebol brasileiro para o mundo.',
-    image: assets.canarinho58,
-    seal: assets.canarinho58Seal,
+    bg: 'https://www.figma.com/api/mcp/asset/5cf5b72b-a033-4313-9001-09dfbb915d00',
+    image: 'https://www.figma.com/api/mcp/asset/2309ef24-9312-4eaf-8384-21c209290a1f',
+    seal: 'https://www.figma.com/api/mcp/asset/468288a1-659a-4533-b0f1-828c792b2f49',
   },
   {
     number: '62',
     label: 'CANARINHO 62',
     index: '#02',
-    title: 'O BICAMPEÃO',
-    description: 'A alegria ganhou ritmo, ginga e mais uma estrela para carregar.',
-    image: assets.canarinho58,
-    seal: assets.canarinho58Seal,
+    title: 'O PIONEIRO',
+    description: 'O Canarinho que apresentou o futebol brasileiro para o mundo.',
+    bg: 'https://www.figma.com/api/mcp/asset/c8ebd62a-3361-43e1-89e5-811111fb2039',
+    image: 'https://www.figma.com/api/mcp/asset/3aa69fcd-81c3-4ff6-bb1f-b7ce873fa2c2',
+    seal: 'https://www.figma.com/api/mcp/asset/d9e204a3-4c12-4970-b318-2d0f39672d69',
   },
   {
     number: '70',
     label: 'CANARINHO 70',
     index: '#03',
-    title: 'O LENDÁRIO',
-    description: 'O espírito ofensivo de uma geração que virou referência mundial.',
-    image: assets.canarinho58,
-    seal: assets.canarinho58Seal,
+    title: 'O PIONEIRO',
+    description: 'O Canarinho que apresentou o futebol brasileiro para o mundo.',
+    bg: 'https://www.figma.com/api/mcp/asset/7a80c30d-ec6c-4d46-9cf8-ea7c4ad9076b',
+    image: 'https://www.figma.com/api/mcp/asset/135ab46a-a378-484b-96e5-f26d93a232f4',
+    seal: 'https://www.figma.com/api/mcp/asset/16c1b763-518c-47a9-ad62-dc0ccb2ad4d8',
   },
   {
     number: '94',
     label: 'CANARINHO 94',
     index: '#04',
-    title: 'O RESILIENTE',
-    description: 'A conquista da força coletiva, da esperança e da emoção.',
-    image: assets.canarinho58,
-    seal: assets.canarinho58Seal,
+    title: 'O PAI DOS PENALTIS',
+    description: 'O Canarinho que apresentou o futebol brasileiro para o mundo.',
+    bg: 'https://www.figma.com/api/mcp/asset/0ae4bb1a-c07a-43a7-a92d-dcb3e3ee3c46',
+    image: 'https://www.figma.com/api/mcp/asset/122b34c5-4854-4d76-8789-c41e541099a4',
+    seal: 'https://www.figma.com/api/mcp/asset/c6546c40-104a-478d-8fa0-da2b58cd9d51',
   },
   {
     number: '02',
     label: 'CANARINHO 02',
     index: '#05',
-    title: 'O PENTA',
-    description: 'A celebração que marcou uma geração e completou as cinco estrelas.',
-    image: assets.canarinho58,
-    seal: assets.canarinho58Seal,
+    title: 'O PAI DOS PENALTIS',
+    description: 'O Canarinho que apresentou o futebol brasileiro para o mundo.',
+    bg: 'https://www.figma.com/api/mcp/asset/1b21bf28-09e6-42a4-a4e2-62e478d506fc',
+    image: 'https://www.figma.com/api/mcp/asset/bd45c566-51e4-45b0-833f-8cf6a63c58df',
+    seal: 'https://www.figma.com/api/mcp/asset/1998d66b-dda4-4770-ab41-c3eb51db8eeb',
   },
 ]
 
@@ -77,21 +78,19 @@ function App() {
   const [activeCanarinho, setActiveCanarinho] = useState(0)
   const { scrollYProgress } = useScroll()
   const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.08])
-  const sealRotate = useTransform(scrollYProgress, [0, 1], [0, 540])
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.14, 0.22], [1, 1, 0])
-  const buttonsOpacity = useTransform(scrollYProgress, [0, 0.07, 0.16], [1, 1, 0])
-  const heroBlur = useTransform(scrollYProgress, [0, 0.18, 0.24], ['blur(0px)', 'blur(0px)', 'blur(8px)'])
-  const collectionOpacity = useTransform(scrollYProgress, [0.14, 0.25], [0, 1])
-  const collectionY = useTransform(scrollYProgress, [0.14, 0.25], [140, 0])
-  const collectionScale = useTransform(scrollYProgress, [0.14, 0.20], [1.07, 1])
-  const collectionBlur = useTransform(scrollYProgress, [0.14, 0.20], ['blur(8px)', 'blur(0px)'])
-  const transitionFlashOpacity = useTransform(scrollYProgress, [0.13, 0.19, 0.27], [0, 0.28, 0])
-  const sweepX = useTransform(scrollYProgress, [0.12, 0.27], ['-120%', '120%'])
-  const sweepOpacity = useTransform(scrollYProgress, [0.12, 0.18, 0.27], [0, 0.45, 0])
-  const vignetteOpacity = useTransform(scrollYProgress, [0, 0.22, 1], [0.15, 0.45, 0.22])
+  const sealRotate = useTransform(scrollYProgress, [0, 1], [0, 360])
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.09, 0.14], [1, 1, 0])
+  const buttonsOpacity = useTransform(scrollYProgress, [0, 0.04, 0.10], [1, 1, 0])
+  const heroBlur = useTransform(scrollYProgress, [0, 0.10, 0.14], ['blur(0px)', 'blur(0px)', 'blur(8px)'])
+  const collectionOpacity = useTransform(scrollYProgress, [0.10, 0.16], [0, 1])
+  const collectionScale = useTransform(scrollYProgress, [0.10, 0.15], [1.07, 1])
+  const collectionBlur = useTransform(scrollYProgress, [0.10, 0.15], ['blur(8px)', 'blur(0px)'])
+  const transitionFlashOpacity = useTransform(scrollYProgress, [0.09, 0.13, 0.18], [0, 0.22, 0])
+  const sweepX = useTransform(scrollYProgress, [0.08, 0.19], ['-120%', '120%'])
+  const sweepOpacity = useTransform(scrollYProgress, [0.08, 0.13, 0.19], [0, 0.35, 0])
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    if (latest < 0.22) {
+    if (latest < 0.15) {
       setActiveSection('Coleção')
       setActiveCanarinho(0)
       return
@@ -99,7 +98,9 @@ function App() {
 
     setActiveSection('Os Canarinhos')
 
-    const itemProgress = (latest - 0.22) / 0.5
+    const RANGE_START = 0.15
+    const RANGE_END = 0.96
+    const itemProgress = (latest - RANGE_START) / (RANGE_END - RANGE_START)
     const nextIndex = Math.min(canarinhos.length - 1, Math.max(0, Math.floor(itemProgress * canarinhos.length)))
     setActiveCanarinho(nextIndex)
   })
@@ -107,7 +108,7 @@ function App() {
   const currentCanarinho = canarinhos[activeCanarinho]
 
   return (
-    <main className="h-[620vh] bg-[#0d1011] text-white">
+    <main className="h-[1200vh] bg-[#0d1011] text-white">
       <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between px-[7.8vw] py-6">
         <motion.div
           className="flex items-center gap-12"
@@ -149,11 +150,17 @@ function App() {
         </motion.button>
       </header>
 
+      <div className="fixed right-5 top-[10vh] z-50 hidden h-[80vh] flex-col items-center lg:flex">
+        <div className="relative h-full w-[2px] overflow-hidden rounded-full bg-white/15">
+          <motion.div
+            className="absolute inset-x-0 top-0 h-full origin-top rounded-full bg-[#ea1d2c]"
+            style={{ scaleY: scrollYProgress }}
+          />
+        </div>
+      </div>
+
       <section className="sticky top-0 h-screen overflow-hidden">
-        <motion.div
-          className="pointer-events-none absolute inset-0 z-40 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.88)_100%)]"
-          style={{ opacity: vignetteOpacity }}
-        />
+        <div className="pointer-events-none absolute inset-0 z-40 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.75)_100%)] opacity-[0.18]" />
         <motion.div
           className="pointer-events-none absolute inset-0 z-40 bg-[#ffd000] mix-blend-screen"
           style={{ opacity: transitionFlashOpacity }}
@@ -203,8 +210,7 @@ function App() {
           <motion.img
             src={assets.heroCanarinhos}
             alt="Cinco Canarinhos colecionáveis"
-            className="absolute left-1/2 top-[calc(50%+7px)] z-10 w-[min(100vw,1440px)] -translate-x-1/2 -translate-y-1/2 object-contain"
-            style={{}}
+            className="absolute bottom-0 left-1/2 z-10 w-[min(100vw,1440px)] max-h-[90vh] -translate-x-1/2 object-contain object-bottom"
             initial={{ opacity: 0, y: 56, scale: 0.97 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.95, delay: 0.35, ease: 'easeOut' }}
@@ -240,9 +246,9 @@ function App() {
 
         <motion.div
           className="absolute inset-0 z-10"
-          style={{ opacity: collectionOpacity, y: collectionY }}
+          style={{ opacity: collectionOpacity }}
         >
-          <motion.img src={assets.canarinhosBg} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ scale: collectionScale, filter: collectionBlur }} />
+          <motion.img src={currentCanarinho.bg} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ scale: collectionScale, filter: collectionBlur }} />
 
           <div className="absolute left-[7.8vw] top-[17%] z-20">
             <motion.h2
@@ -281,7 +287,7 @@ function App() {
 
           <motion.p
             key={`number-${activeCanarinho}`}
-            className="pointer-events-none absolute left-[50%] top-[6%] z-0 font-display text-[min(48vw,702px)] leading-none tracking-[0.02em] text-[#fff2d7]/25"
+            className="pointer-events-none absolute left-[33%] top-[6%] z-0 font-display text-[min(48vw,702px)] leading-none tracking-[0.02em] text-[#fff2d7]/25"
             initial={{ opacity: 0, scale: 1.12, y: 40, filter: 'blur(8px)' }}
             animate={{ opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
@@ -293,7 +299,7 @@ function App() {
             key={`canarinho-${activeCanarinho}`}
             src={currentCanarinho.image}
             alt={currentCanarinho.label}
-            className="absolute bottom-0 left-[21.25%] z-10 h-[92vh] max-h-[598px] w-[73.2vw] object-contain object-bottom"
+            className="absolute bottom-0 left-[21.25%] z-10 max-h-[85vh] w-[57.5vw] object-contain object-bottom"
             initial={{ opacity: 0, y: 80, scale: 0.88, filter: 'blur(10px)' }}
             animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
@@ -304,7 +310,7 @@ function App() {
               <button
                 key={item.number}
                 type="button"
-                onClick={() => scrollToProgress(0.22 + index * 0.1)}
+                onClick={() => scrollToProgress(0.15 + index * 0.162)}
                 className={`grid rounded-full border border-[#5b110e] bg-[#821916] p-1.5 transition-all duration-300 ${
                   activeCanarinho === index ? 'size-[44px] opacity-100' : 'size-[37px] opacity-55 saturate-50'
                 }`}
