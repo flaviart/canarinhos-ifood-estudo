@@ -35,19 +35,13 @@
 @theme {
   --font-sans: 'Sul Sans Test', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Druk Condensed Super', Impact, sans-serif;
-  --color-ink: #111111;
-  --color-muted: #666666;
-  --color-paper: #FEFCF7;
-  --color-cream: #FBF7EF;
-  --color-line: #e5e0d8;
-  --color-accent: #8B7BC8;
-  --color-accent-soft: #ede8fc;
-  --color-coral: #E0704A;
+  --color-ifood: #ea1d2c;
+  --color-yellow: #ffd000;
+  --color-dark: #0d1011;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
 }
 
 body {
@@ -55,8 +49,8 @@ body {
   font-family: 'Sul Sans Test', ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #FEFCF7;
-  color: #111111;
+  background: #0d1011;
+  color: #ffffff;
 }
 
 #root {
@@ -66,6 +60,6 @@ body {
 }
 
 ::selection {
-  background: #ede9fe;
-  color: #111111;
+  background: #ffd000;
+  color: #0d1011;
 }
