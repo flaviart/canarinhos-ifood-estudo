@@ -8,6 +8,10 @@ export default defineConfig({
     port: 5173,
     open: true,
   },
+  preview: {
+    port: 4173,
+  },
+  appType: 'spa',
   build: {
     outDir: 'dist',
     sourcemap: true,
