@@ -33,7 +33,7 @@
 }
 
 @theme {
-  --font-sans: 'Sul Sans Test', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Albert Sans', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Druk Condensed Super', Impact, sans-serif;
   --color-ifood: #ea1d2c;
   --color-yellow: #ffd000;
@@ -46,7 +46,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Sul Sans Test', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Albert Sans', ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #0d1011;

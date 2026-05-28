@@ -30,10 +30,10 @@ export default function ComoColecionarPage() {
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.65, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="font-['Inter',sans-serif] text-[clamp(10px,0.82vw,11.9px)] font-bold tracking-[1.5px] text-black">COLEÇÃO OFICIAL</span>
+          <span className="font-sans text-[clamp(10px,0.82vw,11.9px)] font-bold tracking-[1.5px] text-black">COLEÇÃO OFICIAL</span>
         </motion.div>
         <motion.h2
-          className="font-['Inter',sans-serif] text-[clamp(42px,5vw,72px)] font-bold leading-[0.93] tracking-[-0.02em] text-white"
+          className="font-sans text-[clamp(42px,5vw,72px)] font-bold leading-[0.93] tracking-[0] text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
@@ -41,7 +41,7 @@ export default function ComoColecionarPage() {
           Como<br />colecionar?
         </motion.h2>
         <motion.p
-          className="mt-3 font-['Inter',sans-serif] text-[clamp(14px,1.6vw,23px)] font-normal leading-[1.13] text-white"
+          className="mt-3 font-sans text-[clamp(14px,1.6vw,23px)] font-normal leading-[1.13] text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}

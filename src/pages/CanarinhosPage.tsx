@@ -25,7 +25,7 @@ export default function CanarinhosPage() {
       <div className="absolute left-[7.8vw] top-[17%] z-20">
         <motion.h2
           key={`headline-${activeCanarinho}`}
-          className="font-['Inter',sans-serif] text-[clamp(3rem,5vw,4.45rem)] font-bold leading-[0.98] tracking-[-0.05em]"
+          className="font-sans text-[clamp(3.6rem,5.8vw,5rem)] font-bold leading-[0.98] tracking-[0]"
           initial={{ opacity: 0, x: -18 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -37,10 +37,33 @@ export default function CanarinhosPage() {
           da torcida.
         </motion.h2>
 
+        <div className="mt-8 flex gap-3">
+          {canarinhos.map((item, index) => (
+            <button
+              key={item.number}
+              type="button"
+              onClick={() => setActiveCanarinho(index)}
+              className={`flex cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-2.5 transition-all duration-300 ${
+                activeCanarinho === index
+                  ? 'border-[#ea1d2c]/60 bg-[#ea1d2c]/10 shadow-[0_0_24px_rgba(234,29,44,0.2)]'
+                  : 'border-white/[0.08] bg-white/[0.02] hover:border-white/15 hover:bg-white/[0.05]'
+              }`}
+              aria-label={`Mostrar ${item.label}`}
+            >
+              <img src={item.seal} alt="" className="size-11 rounded-full object-cover" />
+              <span className={`font-display text-xl leading-none transition-colors duration-300 ${
+                activeCanarinho === index ? 'text-[#ea1d2c]' : 'text-white/35'
+              }`}>
+                {item.number}
+              </span>
+            </button>
+          ))}
+        </div>
+
         <div className="mt-12">
           <motion.div
             key={`label-${activeCanarinho}`}
-            className="-rotate-1 rounded-full border border-black bg-[#ffd000] px-7 py-3 text-center font-['Inter',sans-serif] text-[23px] font-bold tracking-[0.2em] text-black shadow-[0_4px_0_#000]"
+            className="-rotate-1 rounded-full border border-black bg-[#ffd000] px-8 py-3.5 text-center font-sans text-[28px] font-bold tracking-[0.2em] text-black shadow-[0_4px_0_#000]"
             initial={{ opacity: 0, y: 12, scale: 0.93 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.4, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -49,17 +72,17 @@ export default function CanarinhosPage() {
           </motion.div>
           <motion.div
             key={`idxtitle-${activeCanarinho}`}
-            className="mt-4 flex items-end gap-3 font-['Inter',sans-serif]"
+            className="mt-5 flex items-end gap-4 font-sans"
             initial={{ opacity: 0, x: -16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
           >
-            <strong className="text-[42px] font-bold leading-none tracking-[-0.03em]">{currentCanarinho.index}</strong>
-            <h3 className="pb-1 text-[26px] font-bold uppercase leading-none">{currentCanarinho.title}</h3>
+            <strong className="text-[50px] font-bold leading-none tracking-[0]">{currentCanarinho.index}</strong>
+            <h3 className="pb-1 text-[30px] font-bold uppercase leading-none">{currentCanarinho.title}</h3>
           </motion.div>
           <motion.p
             key={`desc-${activeCanarinho}`}
-            className="mt-2 max-w-[310px] font-['Inter',sans-serif] text-base font-medium leading-snug tracking-[0.025em]"
+            className="mt-3 max-w-[380px] font-sans text-[17px] font-medium leading-snug tracking-[0.025em]"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.27, ease: [0.16, 1, 0.3, 1] }}
@@ -72,7 +95,7 @@ export default function CanarinhosPage() {
       <AnimatePresence>
         <motion.p
           key={`number-${activeCanarinho}`}
-          className="pointer-events-none absolute left-[57.75%] top-[5%] z-0 -translate-x-1/2 font-display text-[min(42vw,608px)] leading-none tracking-[0.02em] text-[#fff2d7]/25"
+          className="pointer-events-none absolute left-[57.75%] top-[5%] z-0 -translate-x-1/2 font-display text-[min(55vw,790px)] leading-none tracking-[0.02em] text-[#fff2d7]/25"
           initial={{ opacity: 0, y: 70 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -70 }}
@@ -96,26 +119,6 @@ export default function CanarinhosPage() {
         />
       </AnimatePresence>
 
-      <div className="absolute right-[8.1vw] top-[22%] z-30 flex flex-col items-center gap-4">
-        {canarinhos.map((item, index) => (
-          <div key={item.number} className="group relative flex items-center">
-            <span className="pointer-events-none absolute right-[calc(100%+12px)] whitespace-nowrap rounded-full bg-black/75 px-3 py-1 font-['Inter',sans-serif] text-[11px] font-semibold tracking-[0.08em] text-white opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100">
-              {item.label}
-            </span>
-            <button
-              type="button"
-              onClick={() => setActiveCanarinho(index)}
-              className={`grid rounded-full border border-[#5b110e] bg-[#821916] p-1.5 transition-all duration-300 ${
-                activeCanarinho === index ? 'size-[44px] opacity-100' : 'size-[37px] opacity-55 saturate-50'
-              }`}
-              aria-label={`Mostrar ${item.label}`}
-            >
-              <img src={item.seal} alt="" className="size-full rounded-full object-cover" />
-            </button>
-          </div>
-        ))}
-      </div>
-
       <motion.div
         className="absolute bottom-[8%] right-[7.8vw] z-30 hidden size-[128px] items-center justify-center rounded-full bg-[#ea1d2c] shadow-[0_18px_40px_rgba(0,0,0,0.35)] lg:flex"
         initial={{ opacity: 0, scale: 0.75, y: 28 }}
@@ -136,7 +139,7 @@ export default function CanarinhosPage() {
           </defs>
           <text
             fill="white"
-            fontFamily="'Inter', sans-serif"
+            fontFamily="'Albert Sans', sans-serif"
             fontSize="10px"
             fontWeight="500"
             textLength="308"

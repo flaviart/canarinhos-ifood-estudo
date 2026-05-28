@@ -14,16 +14,16 @@ export default function CardsPage() {
 
       <div className="relative h-full">
         <div className="absolute left-[7.8vw] top-[21%] z-10">
-          <h2 className="font-['Inter',sans-serif] font-bold leading-[1.05] text-[clamp(30px,3.8vw,56px)]">
+          <h2 className="font-sans font-bold leading-[1.05] text-[clamp(30px,3.8vw,56px)]">
             Cards<br />holográficos
           </h2>
-          <p className="mt-4 font-['Inter',sans-serif] text-[clamp(13px,1.2vw,17px)] font-normal leading-snug">
+          <p className="mt-4 font-sans text-[clamp(13px,1.2vw,17px)] font-normal leading-snug">
             A história da torcida<br />em versão colecionável.
           </p>
           <motion.button
             type="button"
             onClick={() => setIsFlipped(f => !f)}
-            className="mt-8 flex items-center gap-3 rounded-full bg-[#ea1d2c] border-[3px] border-black px-9 py-4 font-['Inter',sans-serif] text-[clamp(13px,1.2vw,17px)] font-medium shadow-[0_6px_0_black]"
+            className="mt-8 flex items-center gap-3 rounded-full bg-[#ea1d2c] border-[3px] border-black px-9 py-4 font-sans text-[clamp(13px,1.2vw,17px)] font-medium shadow-[0_6px_0_black]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ y: 3, boxShadow: '0 3px 0 #000' }}
             transition={{ type: 'spring', stiffness: 400, damping: 18 }}

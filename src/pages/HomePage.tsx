@@ -31,7 +31,7 @@ export default function HomePage() {
         </motion.p>
 
         <motion.h1
-          className="pointer-events-none absolute left-1/2 top-[17%] z-0 -translate-x-1/2 font-display text-[35vw] leading-none tracking-[0.02em] text-[#fff2d7]/25 lg:text-[382px]"
+          className="pointer-events-none absolute left-1/2 top-[17%] z-0 -translate-x-1/2 font-display text-[min(35vw,520px)] leading-none tracking-[0.02em] text-[#fff2d7]/25"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
@@ -42,7 +42,7 @@ export default function HomePage() {
         <motion.img
           src={assets.heroCanarinhos}
           alt="Cinco Canarinhos colecionáveis"
-          className="absolute bottom-0 left-1/2 z-10 w-[min(100vw,1440px)] max-h-[90vh] -translate-x-1/2 object-contain object-bottom"
+          className="absolute bottom-0 left-1/2 z-10 h-[82vh] w-auto max-w-none -translate-x-1/2"
           initial={{ opacity: 0, y: 56, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.95, delay: 0.35, ease: 'easeOut' }}
@@ -57,7 +57,7 @@ export default function HomePage() {
           <Link to="/canarinhos">
             <motion.button
               type="button"
-              className="group inline-flex w-full max-w-[312px] items-center justify-center gap-8 rounded-full bg-[#ea1d2c] px-6 py-3 font-['Inter',sans-serif] text-base font-bold"
+              className="group inline-flex w-full max-w-[340px] items-center justify-center gap-8 rounded-full bg-[#ea1d2c] px-8 py-4 font-sans text-[17px] font-bold"
               whileHover={{ scale: 1.08, boxShadow: '0 0 40px rgba(234,29,44,0.55)' }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 320, damping: 14 }}
@@ -75,7 +75,7 @@ export default function HomePage() {
           <Link to="/como-colecionar">
             <motion.button
               type="button"
-              className="group inline-flex w-full max-w-[312px] items-center justify-center gap-8 rounded-full border border-white/70 bg-black/35 px-6 py-3 font-['Inter',sans-serif] text-base font-bold transition-colors hover:bg-white hover:text-black"
+              className="group inline-flex w-full max-w-[340px] items-center justify-center gap-8 rounded-full border border-white/70 bg-black/35 px-8 py-4 font-sans text-[17px] font-bold transition-colors hover:bg-white hover:text-black"
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 320, damping: 14 }}

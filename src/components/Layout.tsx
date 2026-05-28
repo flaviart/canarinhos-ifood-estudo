@@ -28,7 +28,7 @@ export default function Layout() {
             <img src="/images/logo.svg" alt="iFood" className="h-full w-full object-contain" />
           </Link>
 
-          <nav className="hidden items-center gap-11 font-['Inter',sans-serif] text-sm font-normal lg:flex">
+          <nav className="hidden items-center gap-11 font-sans text-[15px] font-normal lg:flex">
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -47,7 +47,7 @@ export default function Layout() {
         <Link to="/como-colecionar">
           <motion.button
             type="button"
-            className={`inline-flex items-center gap-2 rounded-full px-7 py-3 font-['Inter',sans-serif] text-sm font-bold transition-colors ${
+            className={`inline-flex items-center gap-2 rounded-full px-8 py-3.5 font-sans text-[15px] font-bold transition-colors ${
               isComoColecionar
                 ? 'bg-white text-[#ea1d2c]'
                 : 'bg-[#ea1d2c] text-white'
@@ -59,7 +59,7 @@ export default function Layout() {
             transition={{ duration: 0.55, delay: 0.2, ease: 'easeOut' }}
           >
             Peça no iFood
-            <ArrowRight size={14} />
+            <ArrowRight size={16} />
           </motion.button>
         </Link>
       </header>
