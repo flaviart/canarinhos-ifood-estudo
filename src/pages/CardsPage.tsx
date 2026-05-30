@@ -14,21 +14,21 @@ export default function CardsPage() {
 
       <div className="relative h-full">
         <div className="absolute left-[7.8vw] top-[21%] z-10">
-          <h2 className="font-sans font-bold leading-[0.98] tracking-[0] text-[clamp(3.6rem,5.8vw,5rem)]">
+          <h2 className="font-sans font-bold leading-[0.98] tracking-[0] text-[clamp(2.9rem,4.64vw,4rem)]">
             Cards<br />holográficos
           </h2>
-          <p className="mt-4 font-sans text-[24px] font-normal leading-snug">
+          <p className="mt-4 font-sans text-[19px] font-normal leading-snug">
             A história da torcida<br />em versão colecionável.
           </p>
           <motion.button
             type="button"
             onClick={() => setIsFlipped(f => !f)}
-            className="mt-8 flex items-center gap-4 rounded-full bg-[#ea1d2c] border-[3px] border-black px-11 py-5 font-sans text-[20px] font-bold shadow-[0_6px_0_black]"
+            className="mt-8 flex items-center gap-3 rounded-full bg-[#ea1d2c] border-[3px] border-black px-9 py-4 font-sans text-[16px] font-bold shadow-[0_6px_0_black]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ y: 3, boxShadow: '0 3px 0 #000' }}
             transition={{ type: 'spring', stiffness: 400, damping: 18 }}
           >
-            {isFlipped ? 'Ver frente' : 'Ver verso'} <RotateCcw size={24} />
+            {isFlipped ? 'Ver frente' : 'Ver verso'} <RotateCcw size={19} />
           </motion.button>
         </div>
 
@@ -88,7 +88,7 @@ export default function CardsPage() {
               key={year}
               type="button"
               onClick={() => { setActiveYear(year); setIsFlipped(false) }}
-              className={`rounded-full px-8 py-[9px] min-w-[126px] text-center font-['Sul_Sans_Test',sans-serif] text-[18px] font-black transition-colors ${
+              className={`rounded-full px-6 py-[7px] min-w-[101px] text-center font-['Sul_Sans_Test',sans-serif] text-[14px] font-black transition-colors ${
                 activeYear === year
                   ? 'bg-[#ffd000] text-black shadow-[0_3px_0_black]'
                   : 'border border-white bg-transparent text-white'

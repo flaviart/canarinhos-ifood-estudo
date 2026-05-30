@@ -25,7 +25,7 @@ export default function CanarinhosPage() {
       <div className="absolute left-[7.8vw] top-[17%] z-20">
         <motion.h2
           key={`headline-${activeCanarinho}`}
-          className="font-sans text-[clamp(3.6rem,5.8vw,5rem)] font-bold leading-[0.98] tracking-[0]"
+          className="font-sans text-[clamp(2.9rem,4.64vw,4rem)] font-bold leading-[0.98] tracking-[0]"
           initial={{ opacity: 0, x: -18 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -43,15 +43,15 @@ export default function CanarinhosPage() {
               key={item.number}
               type="button"
               onClick={() => setActiveCanarinho(index)}
-              className={`flex cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-2.5 transition-all duration-300 ${
+              className={`flex cursor-pointer items-center gap-3 rounded-xl border px-3 py-2 transition-all duration-300 ${
                 activeCanarinho === index
                   ? 'border-white/50 bg-white/15 shadow-[0_0_16px_rgba(255,255,255,0.1)]'
                   : 'border-white/10 bg-white/[0.04] hover:border-white/25 hover:bg-white/[0.08]'
               }`}
               aria-label={`Mostrar ${item.label}`}
             >
-              <img src={item.seal} alt="" className="size-11 rounded-full object-cover" />
-              <span className={`font-sans text-lg font-bold leading-none transition-colors duration-300 ${
+              <img src={item.seal} alt="" className="size-9 rounded-full object-cover" />
+              <span className={`font-sans text-base font-bold leading-none transition-colors duration-300 ${
                 activeCanarinho === index ? 'text-white' : 'text-white/45'
               }`}>
                 {item.number}
@@ -63,7 +63,7 @@ export default function CanarinhosPage() {
         <div className="mt-12">
           <motion.div
             key={`label-${activeCanarinho}`}
-            className="inline-flex -rotate-1 items-center rounded-full border border-black bg-[#ffd000] px-7 py-2.5 font-sans text-[26px] font-black tracking-[0.15em] text-black shadow-[0_4px_0_#000]"
+            className="inline-flex -rotate-1 items-center rounded-full border border-black bg-[#ffd000] px-5 py-2 font-sans text-[21px] font-black tracking-[0.15em] text-black shadow-[0_4px_0_#000]"
             initial={{ opacity: 0, y: 12, scale: 0.93 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.4, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -77,12 +77,12 @@ export default function CanarinhosPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
           >
-            <strong className="text-[64px] font-black leading-[0.85] tracking-[0]">{currentCanarinho.index}</strong>
-            <h3 className="text-[36px] font-black uppercase leading-none">{currentCanarinho.title}</h3>
+            <strong className="text-[51px] font-black leading-[0.85] tracking-[0]">{currentCanarinho.index}</strong>
+            <h3 className="text-[29px] font-black uppercase leading-none">{currentCanarinho.title}</h3>
           </motion.div>
           <motion.p
             key={`desc-${activeCanarinho}`}
-            className="mt-4 max-w-[460px] whitespace-pre-line font-sans text-[20px] font-normal leading-snug tracking-[0.01em]"
+            className="mt-4 max-w-[460px] whitespace-pre-line font-sans text-[16px] font-normal leading-snug tracking-[0.01em]"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.27, ease: [0.16, 1, 0.3, 1] }}
@@ -120,7 +120,7 @@ export default function CanarinhosPage() {
       </AnimatePresence>
 
       <motion.div
-        className="absolute bottom-[8%] right-[7.8vw] z-30 hidden size-[128px] items-center justify-center rounded-full bg-[#ea1d2c] shadow-[0_18px_40px_rgba(0,0,0,0.35)] lg:flex"
+        className="absolute bottom-[8%] right-[7.8vw] z-30 hidden size-[102px] items-center justify-center rounded-full bg-[#ea1d2c] shadow-[0_18px_40px_rgba(0,0,0,0.35)] lg:flex"
         initial={{ opacity: 0, scale: 0.75, y: 28 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.75, delay: 1, ease: 'easeOut' }}
@@ -140,7 +140,7 @@ export default function CanarinhosPage() {
           <text
             fill="white"
             fontFamily="'Albert Sans', sans-serif"
-            fontSize="10px"
+            fontSize="8px"
             fontWeight="500"
             textLength="308"
             lengthAdjust="spacing"
@@ -150,7 +150,7 @@ export default function CanarinhosPage() {
             </textPath>
           </text>
         </motion.svg>
-        <div className="grid size-[73px] place-items-center overflow-hidden rounded-full bg-white">
+        <div className="grid size-[58px] place-items-center overflow-hidden rounded-full bg-white">
           <img src={currentCanarinho.seal} alt="" className="size-full object-cover" />
         </div>
       </motion.div>
