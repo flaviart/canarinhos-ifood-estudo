@@ -10,7 +10,7 @@ export default function ComoColecionarPage() {
 
       <div
         className="absolute overflow-hidden pointer-events-none"
-        style={{ left: 'calc(50% + 15.5vw)', top: 'calc(50% - 10.6%)', width: 'min(68vw, 980px)', height: 'min(29.2vw, 420px)', transform: 'translate(-50%, -50%)' }}
+        style={{ left: 'calc(50% + 15.5vw)', top: 'calc(50% - 10.6%)', width: 'min(54.4vw, 784px)', height: 'min(23.36vw, 336px)', transform: 'translate(-50%, -50%)' }}
       >
         <motion.img
           src={comoColetarCanarinhos}
