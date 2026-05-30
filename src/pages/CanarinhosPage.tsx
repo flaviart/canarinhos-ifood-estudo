@@ -37,21 +37,21 @@ export default function CanarinhosPage() {
           da torcida.
         </motion.h2>
 
-        <div className="mt-8 flex gap-3">
+        <div className="mt-6 flex gap-2">
           {canarinhos.map((item, index) => (
             <button
               key={item.number}
               type="button"
               onClick={() => setActiveCanarinho(index)}
-              className={`flex cursor-pointer items-center gap-3 rounded-xl border px-3 py-2 transition-all duration-300 ${
+              className={`flex cursor-pointer items-center gap-2 rounded-xl border px-2 py-1.5 transition-all duration-300 ${
                 activeCanarinho === index
                   ? 'border-white/50 bg-white/15 shadow-[0_0_16px_rgba(255,255,255,0.1)]'
                   : 'border-white/10 bg-white/[0.04] hover:border-white/25 hover:bg-white/[0.08]'
               }`}
               aria-label={`Mostrar ${item.label}`}
             >
-              <img src={item.seal} alt="" className="size-9 rounded-full object-cover" />
-              <span className={`font-sans text-base font-bold leading-none transition-colors duration-300 ${
+              <img src={item.seal} alt="" className="size-7 rounded-full object-cover" />
+              <span className={`font-sans text-sm font-bold leading-none transition-colors duration-300 ${
                 activeCanarinho === index ? 'text-white' : 'text-white/45'
               }`}>
                 {item.number}
