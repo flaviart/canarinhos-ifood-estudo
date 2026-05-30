@@ -146,7 +146,7 @@ export default function CanarinhosPage() {
             lengthAdjust="spacing"
           >
             <textPath href="#seal-circle" startOffset="0%">
-              ★ COLECIONÁVEIS OFICIAIS ★ RUMO AO HEXA ★
+              ★ COLECIONÁVEIS OFICIAIS ★ RUMO AO HEXA
             </textPath>
           </text>
         </motion.svg>
