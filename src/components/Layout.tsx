@@ -37,7 +37,7 @@ export default function Layout() {
               >
                 {item.label}
                 {activeSection === item.label && (
-                  <motion.span layoutId="active-nav" className="absolute -bottom-3 left-0 h-px w-full bg-[#ea1d2c]" />
+                  <motion.span layoutId="active-nav" className={`absolute -bottom-3 left-0 h-px w-full ${isComoColecionar ? 'bg-white' : 'bg-[#ea1d2c]'}`} />
                 )}
               </Link>
             ))}

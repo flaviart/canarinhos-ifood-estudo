@@ -45,14 +45,14 @@ export default function CanarinhosPage() {
               onClick={() => setActiveCanarinho(index)}
               className={`flex cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-2.5 transition-all duration-300 ${
                 activeCanarinho === index
-                  ? 'border-[#ea1d2c]/60 bg-[#ea1d2c]/10 shadow-[0_0_24px_rgba(234,29,44,0.2)]'
-                  : 'border-white/[0.08] bg-white/[0.02] hover:border-white/15 hover:bg-white/[0.05]'
+                  ? 'border-white/50 bg-white/15 shadow-[0_0_16px_rgba(255,255,255,0.1)]'
+                  : 'border-white/10 bg-white/[0.04] hover:border-white/25 hover:bg-white/[0.08]'
               }`}
               aria-label={`Mostrar ${item.label}`}
             >
               <img src={item.seal} alt="" className="size-11 rounded-full object-cover" />
-              <span className={`font-display text-xl leading-none transition-colors duration-300 ${
-                activeCanarinho === index ? 'text-[#ea1d2c]' : 'text-white/35'
+              <span className={`font-sans text-lg font-bold leading-none transition-colors duration-300 ${
+                activeCanarinho === index ? 'text-white' : 'text-white/45'
               }`}>
                 {item.number}
               </span>
@@ -63,7 +63,7 @@ export default function CanarinhosPage() {
         <div className="mt-12">
           <motion.div
             key={`label-${activeCanarinho}`}
-            className="-rotate-1 rounded-full border border-black bg-[#ffd000] px-8 py-3.5 text-center font-sans text-[28px] font-bold tracking-[0.2em] text-black shadow-[0_4px_0_#000]"
+            className="inline-flex -rotate-1 items-center rounded-full border border-black bg-[#ffd000] px-7 py-2.5 font-sans text-[26px] font-black tracking-[0.15em] text-black shadow-[0_4px_0_#000]"
             initial={{ opacity: 0, y: 12, scale: 0.93 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.4, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -72,17 +72,17 @@ export default function CanarinhosPage() {
           </motion.div>
           <motion.div
             key={`idxtitle-${activeCanarinho}`}
-            className="mt-5 flex items-end gap-4 font-sans"
+            className="mt-4 flex items-baseline gap-3 font-sans"
             initial={{ opacity: 0, x: -16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
           >
-            <strong className="text-[50px] font-bold leading-none tracking-[0]">{currentCanarinho.index}</strong>
-            <h3 className="pb-1 text-[30px] font-bold uppercase leading-none">{currentCanarinho.title}</h3>
+            <strong className="text-[64px] font-black leading-[0.85] tracking-[0]">{currentCanarinho.index}</strong>
+            <h3 className="text-[36px] font-black uppercase leading-none">{currentCanarinho.title}</h3>
           </motion.div>
           <motion.p
             key={`desc-${activeCanarinho}`}
-            className="mt-3 max-w-[380px] font-sans text-[17px] font-medium leading-snug tracking-[0.025em]"
+            className="mt-4 max-w-[460px] whitespace-pre-line font-sans text-[20px] font-normal leading-snug tracking-[0.01em]"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.27, ease: [0.16, 1, 0.3, 1] }}

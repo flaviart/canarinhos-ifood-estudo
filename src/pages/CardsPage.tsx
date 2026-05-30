@@ -14,31 +14,31 @@ export default function CardsPage() {
 
       <div className="relative h-full">
         <div className="absolute left-[7.8vw] top-[21%] z-10">
-          <h2 className="font-sans font-bold leading-[1.05] text-[clamp(30px,3.8vw,56px)]">
+          <h2 className="font-sans font-bold leading-[0.98] tracking-[0] text-[clamp(3.6rem,5.8vw,5rem)]">
             Cards<br />holográficos
           </h2>
-          <p className="mt-4 font-sans text-[clamp(13px,1.2vw,17px)] font-normal leading-snug">
+          <p className="mt-4 font-sans text-[24px] font-normal leading-snug">
             A história da torcida<br />em versão colecionável.
           </p>
           <motion.button
             type="button"
             onClick={() => setIsFlipped(f => !f)}
-            className="mt-8 flex items-center gap-3 rounded-full bg-[#ea1d2c] border-[3px] border-black px-9 py-4 font-sans text-[clamp(13px,1.2vw,17px)] font-medium shadow-[0_6px_0_black]"
+            className="mt-8 flex items-center gap-4 rounded-full bg-[#ea1d2c] border-[3px] border-black px-11 py-5 font-sans text-[20px] font-bold shadow-[0_6px_0_black]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ y: 3, boxShadow: '0 3px 0 #000' }}
             transition={{ type: 'spring', stiffness: 400, damping: 18 }}
           >
-            Virar card <RotateCcw size={22} />
+            {isFlipped ? 'Ver frente' : 'Ver verso'} <RotateCcw size={24} />
           </motion.button>
         </div>
 
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
             className="absolute"
-            initial={{ left: '45%', top: '19%', width: '20vw', rotate: -9 }}
+            initial={{ left: '42%', top: '17%', width: '20vw', rotate: -9, opacity: 0, y: 60 }}
             animate={!isFlipped
-              ? { left: '42%', top: '17%', width: '20vw', rotate: -9 }
-              : { left: '60%', top: '29%', width: '13vw', rotate: 11.5 }
+              ? { left: '42%', top: '17%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
+              : { left: '60%', top: '29%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
             }
             style={{ zIndex: isFlipped ? 1 : 2, scale: 1.2 }}
             transition={{ type: 'spring', stiffness: 200, damping: 28 }}
@@ -59,10 +59,10 @@ export default function CardsPage() {
 
           <motion.div
             className="absolute"
-            initial={{ left: '63%', top: '31%', width: '13vw', rotate: 11.5 }}
+            initial={{ left: '60%', top: '29%', width: '13vw', rotate: 11.5, opacity: 0, y: 60 }}
             animate={!isFlipped
-              ? { left: '60%', top: '29%', width: '13vw', rotate: 11.5 }
-              : { left: '40%', top: '17%', width: '20vw', rotate: -9 }
+              ? { left: '60%', top: '29%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
+              : { left: '40%', top: '17%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
             }
             style={{ zIndex: isFlipped ? 2 : 1, scale: 1.2 }}
             transition={{ type: 'spring', stiffness: 200, damping: 28 }}
