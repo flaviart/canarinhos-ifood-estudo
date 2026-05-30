@@ -95,7 +95,7 @@ export default function CanarinhosPage() {
       <AnimatePresence>
         <motion.p
           key={`number-${activeCanarinho}`}
-          className="pointer-events-none absolute left-[57.75%] top-[5%] z-0 -translate-x-1/2 font-display text-[min(55vw,790px)] leading-none tracking-[0.02em] text-[#fff2d7]/25"
+          className="pointer-events-none absolute left-[57.75%] top-[5%] z-0 -translate-x-1/2 font-display text-[min(44vw,632px)] leading-none tracking-[0.02em] text-[#fff2d7]/25"
           initial={{ opacity: 0, y: 70 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -70 }}
