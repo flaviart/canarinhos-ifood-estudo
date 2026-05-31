@@ -142,7 +142,7 @@ export default function CanarinhosPage() {
             fontFamily="'Albert Sans', sans-serif"
             fontSize="12px"
             fontWeight="500"
-            textLength="308"
+            textLength="300"
             lengthAdjust="spacing"
           >
             <textPath href="#seal-circle" startOffset="0%">
