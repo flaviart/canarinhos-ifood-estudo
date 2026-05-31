@@ -140,7 +140,7 @@ export default function CanarinhosPage() {
           <text
             fill="white"
             fontFamily="'Albert Sans', sans-serif"
-            fontSize="10px"
+            fontSize="12px"
             fontWeight="500"
             textLength="280"
             lengthAdjust="spacing"
