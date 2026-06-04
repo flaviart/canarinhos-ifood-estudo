@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Play } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { comoColetarBg, comoColetarCanarinhos, comoColetarInstrucoes, comoColetarInfo } from '../data/site'
+import { comoColetarBg, mobileComoColetarBg, comoColetarCanarinhos, comoColetarCanarinhosMobile, comoColetarInstrucoes, comoColetarInfo } from '../data/site'
 
 export default function ComoColecionarPage() {
   return (
@@ -80,11 +80,11 @@ export default function ComoColecionarPage() {
       {/* Mobile Version */}
       <div className="lg:hidden">
         <div className="absolute inset-0">
-          <img src={comoColetarBg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <img src={mobileComoColetarBg} alt="" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
         </div>
 
-        <div className="relative z-10 flex h-full flex-col overflow-y-auto px-5 pb-[100px] pt-[76px]">
+        <div className="relative z-10 flex h-full flex-col overflow-y-auto px-5 pb-[160px] pt-[110px]">
           <motion.div
             className="inline-flex w-fit items-center rounded-full bg-[#ffd000] px-3 py-1"
             initial={{ opacity: 0, x: -20, scale: 0.9 }}
@@ -95,12 +95,12 @@ export default function ComoColecionarPage() {
           </motion.div>
 
           <motion.h2
-            className="mt-3 font-sans text-[32px] font-bold leading-[1.05] tracking-[-0.5px] text-white"
+            className="mt-3 font-sans text-[30px] font-bold leading-[1.1] tracking-[-0.5px] text-white whitespace-nowrap"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            Como<br />colecionar?
+            Como colecionar?
           </motion.h2>
 
           <motion.p
@@ -120,9 +120,9 @@ export default function ComoColecionarPage() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
             <img
-              src={comoColetarCanarinhos}
+              src={comoColetarCanarinhosMobile}
               alt="Os cinco Canarinhos"
-              className="w-full max-w-[320px] object-contain"
+              className="w-full object-contain"
               loading="lazy"
             />
           </motion.div>
@@ -154,13 +154,10 @@ export default function ComoColecionarPage() {
           <Link to="/canarinhos" className="block">
             <motion.button
               type="button"
-              className="flex w-full items-center justify-between rounded-full bg-[#ea1d2c] px-6 py-4 font-sans text-[16px] font-bold text-white"
+              className="flex w-full items-center justify-center rounded-full border-2 border-[#ea1d2c] bg-white px-6 py-4 font-sans text-[16px] font-bold text-[#ea1d2c]"
               whileTap={{ scale: 0.97 }}
             >
-              Conheça os Canarinhos
-              <span className="grid size-7 place-items-center rounded-full bg-white text-[#ea1d2c]">
-                <Play size={11} fill="currentColor" />
-              </span>
+              Peça no iFood
             </motion.button>
           </Link>
         </div>

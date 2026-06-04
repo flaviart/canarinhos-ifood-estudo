@@ -116,7 +116,7 @@ export default function CardsPage() {
         </div>
 
         {/* Spacer para o header fixo */}
-        <div className="h-[72px]" />
+        <div className="h-[110px]" />
 
         {/* Content */}
         <div className="relative z-10 px-5">

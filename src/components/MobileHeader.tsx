@@ -10,7 +10,7 @@ export default function MobileHeader() {
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-4 py-4 lg:hidden">
+      <header className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-gradient-to-b from-black/95 via-black/70 to-transparent px-4 py-4 lg:hidden">
         <Link to="/" onClick={() => setOpen(false)} aria-label="Página inicial">
           <img src="/images/logo.svg" alt="iFood" className="h-[36px] w-auto" />
         </Link>

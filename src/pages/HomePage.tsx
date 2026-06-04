@@ -110,10 +110,10 @@ export default function HomePage() {
         </motion.div>
 
         {/* Spacer para o header fixo */}
-        <div className="h-[72px]" />
+        <div className="h-[110px]" />
 
         {/* Text */}
-        <div className="relative z-10 px-5">
+        <div className="relative z-10 px-3">
           <motion.p
             className="text-center text-[10px] font-medium uppercase leading-relaxed tracking-[0.1em] text-[#ffd000] whitespace-nowrap"
             initial={{ opacity: 0, y: 18 }}
@@ -124,14 +124,13 @@ export default function HomePage() {
           </motion.p>
 
           <motion.h1
-            className="pointer-events-none mt-0 text-center font-display text-[clamp(150px,46vw,260px)] leading-[0.95] tracking-[0.02em] text-[#fff2d7]/30"
+            className="pointer-events-none mt-0 text-center font-display leading-[0.85] tracking-[0.02em] text-[#fff2d7]/30"
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
           >
-            CANAR
-            <br />
-            INHOS
+            <span className="block text-[clamp(137px,41vw,227px)]">CANAR</span>
+            <span className="block text-[clamp(137px,41vw,227px)]">INHOS</span>
           </motion.h1>
         </div>
 

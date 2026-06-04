@@ -170,10 +170,10 @@ export default function CanarinhosPage() {
         </div>
 
         {/* Spacer para o header fixo */}
-        <div className="h-[72px]" />
+        <div className="h-[110px]" />
 
         {/* Content scrollable */}
-        <div className="relative z-10 flex h-[calc(100vh-72px)] flex-col px-5 pb-[120px]">
+        <div className="relative z-10 flex h-[calc(100vh-72px)] flex-col px-5 pb-[140px]">
           <motion.h2
             className="font-sans text-[34px] font-bold leading-[1.05] tracking-[-0.5px] text-white"
             initial={{ opacity: 0, y: 18 }}
