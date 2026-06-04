@@ -1,13 +1,8 @@
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-
-const navItems = [
-  { label: 'Coleção', path: '/' },
-  { label: 'Os Canarinhos', path: '/canarinhos' },
-  { label: 'Cards holográficos', path: '/cards' },
-  { label: 'Como colecionar', path: '/como-colecionar' },
-]
+import { navItems } from '../data/site'
+import MobileHeader from './MobileHeader'
 
 export default function Layout() {
   const location = useLocation()
@@ -17,7 +12,9 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-[#0d1011] text-white">
-      <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between px-[7.8vw] py-5">
+      <MobileHeader />
+
+      <header className="fixed left-0 top-0 z-50 hidden w-full items-center justify-between px-[7.8vw] py-5 lg:flex">
         <motion.div
           className="flex items-center gap-10"
           initial={{ opacity: 0, y: -18 }}

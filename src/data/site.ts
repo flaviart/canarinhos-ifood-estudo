@@ -1,3 +1,10 @@
+export const navItems = [
+  { label: 'Coleção', path: '/' },
+  { label: 'Os Canarinhos', path: '/canarinhos' },
+  { label: 'Cards holográficos', path: '/cards' },
+  { label: 'Como colecionar', path: '/como-colecionar' },
+] as const
+
 export const canarinhos = [
   {
     number: '58',

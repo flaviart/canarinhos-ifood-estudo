@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 fontes/
+.mobile-preview/
 
 # Editor directories and files
 .vscode/*
