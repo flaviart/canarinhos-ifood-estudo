@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Play } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { comoColetarBg, mobileComoColetarBg, comoColetarCanarinhos, comoColetarCanarinhosMobile, comoColetarInstrucoes, comoColetarInfo } from '../data/site'
 
