@@ -18,11 +18,11 @@ export default function CardsPage() {
         <img src={cardsGlow} alt="" className="pointer-events-none absolute h-[115%] w-[115%] top-[-7%] left-1/2 -translate-x-[48%] mix-blend-screen opacity-75" loading="lazy" />
 
         <div className="relative h-full">
-          <div className="absolute left-[7.8vw] top-[22%] z-10">
-            <h2 className="font-sans font-bold leading-[0.98] tracking-[0] text-[clamp(1.75rem,2.4vw,2.25rem)]">
+          <div className="absolute left-[7.8vw] top-[18%] z-10">
+            <h2 className="font-sans font-bold leading-[0.98] tracking-[0] text-[clamp(2.9rem,4.64vw,4rem)]">
               Cards<br />holográficos
             </h2>
-            <p className="mt-4 font-sans text-[15px] font-normal leading-snug">
+            <p className="mt-3 font-sans text-[19px] font-normal leading-snug">
               A história da torcida<br />em versão colecionável.
             </p>
             <motion.button
@@ -40,10 +40,10 @@ export default function CardsPage() {
           <div className="absolute inset-0 pointer-events-none">
             <motion.div
               className="absolute"
-              initial={{ left: '38%', top: '22%', width: '22vw', rotate: -9, opacity: 0, y: 60 }}
+              initial={{ left: '38%', top: '18%', width: '27.5vw', rotate: -9, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '38%', top: '22%', width: '22vw', rotate: -9, opacity: 1, y: 0 }
-                : { left: '54%', top: '34%', width: '14vw', rotate: 11.5, opacity: 1, y: 0 }
+                ? { left: '38%', top: '18%', width: '27.5vw', rotate: -9, opacity: 1, y: 0 }
+                : { left: '54%', top: '32%', width: '17.5vw', rotate: 11.5, opacity: 1, y: 0 }
               }
               style={{ zIndex: isFlipped ? 1 : 2 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
@@ -64,10 +64,10 @@ export default function CardsPage() {
 
             <motion.div
               className="absolute"
-              initial={{ left: '54%', top: '34%', width: '14vw', rotate: 11.5, opacity: 0, y: 60 }}
+              initial={{ left: '54%', top: '32%', width: '17.5vw', rotate: 11.5, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '54%', top: '34%', width: '14vw', rotate: 11.5, opacity: 1, y: 0 }
-                : { left: '38%', top: '22%', width: '22vw', rotate: -9, opacity: 1, y: 0 }
+                ? { left: '54%', top: '32%', width: '17.5vw', rotate: 11.5, opacity: 1, y: 0 }
+                : { left: '38%', top: '18%', width: '27.5vw', rotate: -9, opacity: 1, y: 0 }
               }
               style={{ zIndex: isFlipped ? 2 : 1 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
