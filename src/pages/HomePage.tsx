@@ -106,7 +106,7 @@ export default function HomePage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
         >
-          <img src={assets.heroBgMobile} alt="" className="h-full w-full object-cover" />
+          <img src={assets.heroBgMobile} alt="" className="h-full w-full scale-110 object-cover" />
         </motion.div>
 
         {/* Spacer para o header fixo */}

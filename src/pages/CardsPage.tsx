@@ -112,7 +112,7 @@ export default function CardsPage() {
       {/* Mobile Version */}
       <div className="lg:hidden">
         <div className="absolute inset-0 bg-black">
-          <img src={mobileBg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <img src={mobileBg} alt="" className="absolute inset-0 h-full w-full scale-110 object-cover" />
         </div>
 
         {/* Spacer para o header fixo */}

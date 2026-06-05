@@ -80,7 +80,7 @@ export default function ComoColecionarPage() {
       {/* Mobile Version */}
       <div className="lg:hidden">
         <div className="absolute inset-0">
-          <img src={mobileComoColetarBg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <img src={mobileComoColetarBg} alt="" className="absolute inset-0 h-full w-full scale-110 object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
         </div>
 
