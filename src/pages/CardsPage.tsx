@@ -40,10 +40,10 @@ export default function CardsPage() {
           <div className="absolute inset-0 pointer-events-none">
             <motion.div
               className="absolute"
-              initial={{ left: '38%', top: '18%', width: '27.5vw', rotate: -9, opacity: 0, y: 60 }}
+              initial={{ left: '38%', top: '14%', width: '27.5vw', rotate: -9, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '38%', top: '18%', width: '27.5vw', rotate: -9, opacity: 1, y: 0 }
-                : { left: '54%', top: '32%', width: '17.5vw', rotate: 11.5, opacity: 1, y: 0 }
+                ? { left: '38%', top: '14%', width: '27.5vw', rotate: -9, opacity: 1, y: 0 }
+                : { left: '58%', top: '28%', width: '17.5vw', rotate: 11.5, opacity: 1, y: 0 }
               }
               style={{ zIndex: isFlipped ? 1 : 2 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
@@ -64,10 +64,10 @@ export default function CardsPage() {
 
             <motion.div
               className="absolute"
-              initial={{ left: '54%', top: '32%', width: '17.5vw', rotate: 11.5, opacity: 0, y: 60 }}
+              initial={{ left: '58%', top: '28%', width: '17.5vw', rotate: 11.5, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '54%', top: '32%', width: '17.5vw', rotate: 11.5, opacity: 1, y: 0 }
-                : { left: '38%', top: '18%', width: '27.5vw', rotate: -9, opacity: 1, y: 0 }
+                ? { left: '58%', top: '28%', width: '17.5vw', rotate: 11.5, opacity: 1, y: 0 }
+                : { left: '38%', top: '14%', width: '27.5vw', rotate: -9, opacity: 1, y: 0 }
               }
               style={{ zIndex: isFlipped ? 2 : 1 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
