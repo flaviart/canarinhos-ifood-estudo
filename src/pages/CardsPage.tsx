@@ -18,7 +18,7 @@ export default function CardsPage() {
         <img src={cardsGlow} alt="" className="pointer-events-none absolute h-[115%] w-[115%] top-[-7%] left-1/2 -translate-x-[48%] mix-blend-screen opacity-75" loading="lazy" />
 
         <div className="relative h-full">
-          <div className="absolute left-[7.8vw] top-[21%] z-10">
+          <div className="absolute left-[7.8vw] top-[18%] z-10">
             <h2 className="font-sans font-bold leading-[0.98] tracking-[0] text-[clamp(2.9rem,4.64vw,4rem)]">
               Cards<br />holográficos
             </h2>
@@ -40,10 +40,10 @@ export default function CardsPage() {
           <div className="absolute inset-0 pointer-events-none">
             <motion.div
               className="absolute"
-              initial={{ left: '42%', top: '22%', width: '20vw', rotate: -9, opacity: 0, y: 60 }}
+              initial={{ left: '42%', top: '18%', width: '20vw', rotate: -9, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '42%', top: '22%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
-                : { left: '60%', top: '32%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
+                ? { left: '42%', top: '18%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
+                : { left: '55%', top: '28%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
               }
               style={{ zIndex: isFlipped ? 1 : 2 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
@@ -64,10 +64,10 @@ export default function CardsPage() {
 
             <motion.div
               className="absolute"
-              initial={{ left: '60%', top: '32%', width: '13vw', rotate: 11.5, opacity: 0, y: 60 }}
+              initial={{ left: '55%', top: '28%', width: '13vw', rotate: 11.5, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '60%', top: '32%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
-                : { left: '40%', top: '22%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
+                ? { left: '55%', top: '28%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
+                : { left: '42%', top: '18%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
               }
               style={{ zIndex: isFlipped ? 2 : 1 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
@@ -87,7 +87,7 @@ export default function CardsPage() {
             </motion.div>
           </div>
 
-          <div className="absolute bottom-[10%] left-1/2 z-20 flex -translate-x-[calc(50%+9px)] gap-6">
+          <div className="absolute bottom-[8%] left-1/2 z-20 flex -translate-x-[calc(50%+9px)] gap-4">
             {CARD_YEARS.map(year => (
               <motion.button
                 key={year}
