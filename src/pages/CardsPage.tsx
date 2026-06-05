@@ -13,16 +13,16 @@ export default function CardsPage() {
   return (
     <section className="relative h-screen overflow-hidden bg-[#0d1011]">
       {/* Desktop Version */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block h-full">
         <img src={cardsBg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-90" loading="lazy" />
         <img src={cardsGlow} alt="" className="pointer-events-none absolute h-[115%] w-[115%] top-[-7%] left-1/2 -translate-x-[48%] mix-blend-screen opacity-75" loading="lazy" />
 
         <div className="relative h-full">
-          <div className="absolute left-[7.8vw] top-[20%] z-10">
-            <h2 className="font-sans font-bold leading-[0.98] tracking-[0] text-[clamp(2rem,3vw,2.5rem)]">
+          <div className="absolute left-[7.8vw] top-[22%] z-10">
+            <h2 className="font-sans font-bold leading-[0.98] tracking-[0] text-[clamp(1.75rem,2.4vw,2.25rem)]">
               Cards<br />holográficos
             </h2>
-            <p className="mt-4 font-sans text-[16px] font-normal leading-snug">
+            <p className="mt-4 font-sans text-[15px] font-normal leading-snug">
               A história da torcida<br />em versão colecionável.
             </p>
             <motion.button
@@ -40,10 +40,10 @@ export default function CardsPage() {
           <div className="absolute inset-0 pointer-events-none">
             <motion.div
               className="absolute"
-              initial={{ left: '40%', top: '28%', width: '18vw', rotate: -9, opacity: 0, y: 60 }}
+              initial={{ left: '38%', top: '22%', width: '22vw', rotate: -9, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '40%', top: '28%', width: '18vw', rotate: -9, opacity: 1, y: 0 }
-                : { left: '52%', top: '38%', width: '12vw', rotate: 11.5, opacity: 1, y: 0 }
+                ? { left: '38%', top: '22%', width: '22vw', rotate: -9, opacity: 1, y: 0 }
+                : { left: '54%', top: '34%', width: '14vw', rotate: 11.5, opacity: 1, y: 0 }
               }
               style={{ zIndex: isFlipped ? 1 : 2 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
@@ -64,10 +64,10 @@ export default function CardsPage() {
 
             <motion.div
               className="absolute"
-              initial={{ left: '52%', top: '38%', width: '12vw', rotate: 11.5, opacity: 0, y: 60 }}
+              initial={{ left: '54%', top: '34%', width: '14vw', rotate: 11.5, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '52%', top: '38%', width: '12vw', rotate: 11.5, opacity: 1, y: 0 }
-                : { left: '40%', top: '28%', width: '18vw', rotate: -9, opacity: 1, y: 0 }
+                ? { left: '54%', top: '34%', width: '14vw', rotate: 11.5, opacity: 1, y: 0 }
+                : { left: '38%', top: '22%', width: '22vw', rotate: -9, opacity: 1, y: 0 }
               }
               style={{ zIndex: isFlipped ? 2 : 1 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
