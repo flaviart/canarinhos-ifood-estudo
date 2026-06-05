@@ -28,7 +28,7 @@ export default function CardsPage() {
             <motion.button
               type="button"
               onClick={() => setIsFlipped(f => !f)}
-              className="mt-8 flex items-center gap-3 rounded-full bg-[#ea1d2c] border-[3px] border-black px-9 py-4 font-sans text-[16px] font-bold shadow-[0_6px_0_black]"
+              className="mt-8 flex items-center justify-center gap-3 rounded-full bg-[#ea1d2c] border-[3px] border-black px-9 py-4 font-sans text-[16px] font-bold shadow-[0_6px_0_black]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ y: 3, boxShadow: '0 3px 0 #000' }}
               transition={{ type: 'spring', stiffness: 400, damping: 18 }}
@@ -40,12 +40,12 @@ export default function CardsPage() {
           <div className="absolute inset-0 pointer-events-none">
             <motion.div
               className="absolute"
-              initial={{ left: '42%', top: '17%', width: '20vw', rotate: -9, opacity: 0, y: 60 }}
+              initial={{ left: '42%', top: '22%', width: '20vw', rotate: -9, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '42%', top: '17%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
-                : { left: '60%', top: '29%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
+                ? { left: '42%', top: '22%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
+                : { left: '60%', top: '32%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
               }
-              style={{ zIndex: isFlipped ? 1 : 2, scale: 1.2 }}
+              style={{ zIndex: isFlipped ? 1 : 2 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
             >
               <AnimatePresence mode="wait">
@@ -64,12 +64,12 @@ export default function CardsPage() {
 
             <motion.div
               className="absolute"
-              initial={{ left: '60%', top: '29%', width: '13vw', rotate: 11.5, opacity: 0, y: 60 }}
+              initial={{ left: '60%', top: '32%', width: '13vw', rotate: 11.5, opacity: 0, y: 60 }}
               animate={!isFlipped
-                ? { left: '60%', top: '29%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
-                : { left: '40%', top: '17%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
+                ? { left: '60%', top: '32%', width: '13vw', rotate: 11.5, opacity: 1, y: 0 }
+                : { left: '40%', top: '22%', width: '20vw', rotate: -9, opacity: 1, y: 0 }
               }
-              style={{ zIndex: isFlipped ? 2 : 1, scale: 1.2 }}
+              style={{ zIndex: isFlipped ? 2 : 1 }}
               transition={{ type: 'spring', stiffness: 200, damping: 28 }}
             >
               <AnimatePresence mode="wait">
